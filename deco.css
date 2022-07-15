@@ -25,43 +25,74 @@ button{
     padding: 10px 20px;
     background-color:rgb(27, 165, 27) ;
 }
-.navbar{
-    position: fixed;
+ li a{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+ul li{
+    list-style:  none;
+}
+nav{
+    background-color: antiquewhite;
+    height: 80px;
     width: 100%;
 }
-
-nav{
-    display: flex;
-    align-items: center;
-    padding-left: 10%;
-    padding-right: 10%;
-    justify-content: space-between;
-    background-color: whitesmoke;
+label.logo{
+    line-height: 80px;
+    font-size: 30px;
+    padding:0 100px;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
 }
 nav ul li{
-    list-style-type: none;
     display: inline-block;
-    padding: 10px 20px;
-    
+    margin: 0 5px;
 }
-a{
-    text-decoration: none;
+nav ul li a{
     color: black;
-    font-weight: bold;
-    font-size: 17px;
+    line-height: 80px;
+    font-size: 19px;
+    padding: 7px 13px;
+    font-weight: 600;
 }
-nav ul li a:hover{
-color: darkred;
-transition: 3ms;
-
+.checkbtn{
+    font-size: 30px;
+    line-height: 80px;
+    float: right;
+    margin-right: 40px;
 }
-
-nav select{
+#check{
     display: none;
 }
-
-@media (max-width: 960px) {
-    nav ul     { display: none; }
-    nav select { display: inline-block; }
-  }
-
+@media(max-width:952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media(max-width:858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top:80px;
+        left: 0;
+        text-align: center;
+        background-color: wheat;
+        
+    }
+    nav ul li{
+        display: block;
+        
+    }
+}
